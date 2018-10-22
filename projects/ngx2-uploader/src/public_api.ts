@@ -1,5 +1,5 @@
 /*
- * Public API Surface of ngx-uploader
+ * Public API Surface of ngx2-uploader
  */
 
 export * from './lib/interfaces';

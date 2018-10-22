@@ -34,7 +34,7 @@ uploadRouter.post('/upload', upload.any(), (req: express.Request, res: express.R
 });
 
 function index(req: express.Request, res: express.Response): void {
-  return res.status(200).sendFile(path.resolve(__dirname, '../ngx-uploader-demo/index.html'));
+  return res.status(200).sendFile(path.resolve(__dirname, '../ngx2-uploader-demo/index.html'));
 }
 
 const app = express();
@@ -43,7 +43,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(uploadRouter);
 
-app.get('*.*', express.static(path.resolve(__dirname, '../ngx-uploader-demo'), { index: false }));
+app.get('*.*', express.static(path.resolve(__dirname, '../ngx2-uploader-demo'), { index: false }));
 app.get('*', index);
 
 app.listen(config.port, () => console.log(`Server running on port ${config.port}...`));
