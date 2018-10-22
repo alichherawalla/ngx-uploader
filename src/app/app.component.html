@@ -20,11 +20,12 @@
               </div>
             </div>
             <div class="upload-box-content">
-              <div class="drop-container" ngFileDrop [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput">
+              <div (click)="startUploadAll()"> start</div>
+              <div class="drop-container" ngFileDrop  (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput">
                 <p>
                   Drag files here or
                   <label class="upload-button">
-                    <input type="file" ngFileSelect [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" multiple> browse
+                    <input type="file" ngFileSelect (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" multiple> browse
                   </label>
                   to upload.
                 </p>
@@ -33,6 +34,8 @@
                 <div class="upload-item-content">
                   <div class="filename">
                     <i class="ionicon ion-ios-copy"></i>
+                    <div (click)="cancelUpload(f.id)"> cancel</div>
+                    <div (click)="startUpload(f)"> start</div>
                     <span>{{ f.name }}</span>
                   </div>
                   <div class="progress-content">

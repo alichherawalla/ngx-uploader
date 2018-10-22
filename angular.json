@@ -122,7 +122,7 @@
         }
       }
     },
-    "ngx-uploader": {
+    "ngx2-uploader": {
       "root": "projects/ngx-uploader",
       "sourceRoot": "projects/ngx-uploader/src",
       "projectType": "library",

@@ -17,11 +17,11 @@
       "dom"
     ],
     "paths": {
-      "ngx-uploader": [
-        "dist/ngx-uploader"
+      "ngx2-uploader": [
+        "dist/ngx2-uploader"
       ],
-      "ngx-uploader/*": [
-        "dist/ngx-uploader/*"
+      "ngx2-uploader/*": [
+        "dist/ngx2-uploader/*"
       ]
     }
   }
